@@ -39,6 +39,7 @@ import {
 import Link from "next/link"
 import { useRouter, usePathname } from "next/navigation"
 import { useTheme } from "@/contexts/ThemeContext"
+import { COLORS } from "@/constants/colors"
 
 const drawerWidth = 280
 
@@ -93,7 +94,7 @@ export default function DashboardLayout({
 
   const drawer = (
     <Box>
-      <Box sx={{ p: 2, textAlign: "center", backgroundColor: "#4CAF50", color: "white" }}>
+      <Box sx={{ p: 2, textAlign: "center", backgroundColor: COLORS.PRIMARY, color: "white" }}>
         <Psychology sx={{ fontSize: 32, mb: 1 }} />
         <Typography variant="h6" noWrap component="div">
           PsicoSystem
@@ -113,10 +114,10 @@ export default function DashboardLayout({
               sx={{
                 borderRadius: 1,
                 "&.Mui-selected": {
-                  backgroundColor: mode === "dark" ? "rgba(76, 175, 80, 0.2)" : "#E8F5E8",
-                  color: "#2E7D32",
+                  backgroundColor: mode === "dark" ? COLORS.PRIMARY_BACKGROUND_ALPHA : COLORS.PRIMARY_BACKGROUND,
+                  color: COLORS.PRIMARY_DARK,
                   "& .MuiListItemIcon-root": {
-                    color: "#2E7D32",
+                    color: COLORS.PRIMARY_DARK,
                   },
                 },
               }}
@@ -170,7 +171,7 @@ export default function DashboardLayout({
             onClick={handleProfileMenuOpen}
             color="inherit"
           >
-            <Avatar sx={{ width: 32, height: 32, backgroundColor: "#4CAF50" }}>
+            <Avatar sx={{ width: 32, height: 32, backgroundColor: COLORS.PRIMARY }}>
               <AccountCircle />
             </Avatar>
           </IconButton>

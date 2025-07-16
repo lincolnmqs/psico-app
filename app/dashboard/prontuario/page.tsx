@@ -25,6 +25,7 @@ import {
   CardContent,
 } from "@mui/material"
 import { Add, Search, Edit, Visibility, Delete, Person } from "@mui/icons-material"
+import { COLORS } from "@/constants/colors"
 
 interface Patient {
   id: number
@@ -164,7 +165,7 @@ export default function ProntuarioPage() {
           variant="contained"
           startIcon={<Add />}
           onClick={() => handleOpenDialog()}
-          sx={{ backgroundColor: "#4CAF50" }}
+          sx={{ backgroundColor: COLORS.PRIMARY }}
         >
           Novo Paciente
         </Button>
@@ -314,7 +315,7 @@ export default function ProntuarioPage() {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleCloseDialog}>Cancelar</Button>
-          <Button onClick={handleSave} variant="contained" sx={{ backgroundColor: "#4CAF50" }}>
+          <Button onClick={handleSave} variant="contained" sx={{ backgroundColor: COLORS.PRIMARY }}>
             {selectedPatient ? "Salvar" : "Adicionar"}
           </Button>
         </DialogActions>

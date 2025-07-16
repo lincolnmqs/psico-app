@@ -20,6 +20,7 @@ import { IconButton as MuiIconButton, InputAdornment } from "@mui/material"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useTheme } from "@/contexts/ThemeContext"
+import { COLORS, GRADIENTS } from "@/constants/colors"
 
 export default function LoginPage() {
   const [email, setEmail] = useState("")
@@ -52,10 +53,7 @@ export default function LoginPage() {
     <Box
       sx={{
         minHeight: "100vh",
-        background:
-          mode === "dark"
-            ? "linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%)"
-            : "linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%)",
+        background: mode === "dark" ? GRADIENTS.PRIMARY_DARK : GRADIENTS.PRIMARY_LIGHT,
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -92,7 +90,7 @@ export default function LoginPage() {
         >
           {/* Logo */}
           <Box sx={{ mb: 3 }}>
-            <Psychology sx={{ fontSize: 48, color: "#4CAF50", mb: 1 }} />
+            <Psychology sx={{ fontSize: 48, color: COLORS.PRIMARY, mb: 1 }} />
             <Typography variant="h4" component="h1" gutterBottom>
               PsicoSystem
             </Typography>
@@ -152,9 +150,9 @@ export default function LoginPage() {
                 mt: 3,
                 mb: 2,
                 py: 1.5,
-                backgroundColor: "#4CAF50",
+                backgroundColor: COLORS.PRIMARY,
                 "&:hover": {
-                  backgroundColor: "#2E7D32",
+                  backgroundColor: COLORS.PRIMARY_DARK,
                 },
               }}
             >
@@ -162,7 +160,7 @@ export default function LoginPage() {
             </Button>
 
             <Box sx={{ mt: 2 }}>
-              <MuiLink href="#" variant="body2" sx={{ color: "#4CAF50" }}>
+              <MuiLink href="#" variant="body2" sx={{ color: COLORS.PRIMARY }}>
                 Esqueceu sua senha?
               </MuiLink>
             </Box>
@@ -171,7 +169,7 @@ export default function LoginPage() {
 
             <Typography variant="body2" color="text.secondary">
               Não tem uma conta?{" "}
-              <MuiLink href="#" sx={{ color: "#4CAF50" }}>
+              <MuiLink href="#" sx={{ color: COLORS.PRIMARY }}>
                 Cadastre-se aqui
               </MuiLink>
             </Typography>
@@ -198,7 +196,7 @@ export default function LoginPage() {
           </Box>
 
           <Box sx={{ mt: 3 }}>
-            <Button component={Link} href="/" variant="text" sx={{ color: "#4CAF50" }}>
+            <Button component={Link} href="/" variant="text" sx={{ color: COLORS.PRIMARY }}>
               ← Voltar ao início
             </Button>
           </Box>

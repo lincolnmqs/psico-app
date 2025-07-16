@@ -14,13 +14,14 @@ import {
   LinearProgress,
 } from "@mui/material"
 import { People, Schedule, Payment, Assignment, TrendingUp, AccessTime, Warning } from "@mui/icons-material"
+import { COLORS } from "@/constants/colors"
 
 const statsCards = [
   {
     title: "Pacientes Ativos",
     value: "24",
     icon: <People />,
-    color: "#4CAF50",
+    color: COLORS.PRIMARY,
     change: "+12%",
   },
   {
@@ -135,7 +136,7 @@ export default function DashboardPage() {
                   </Box>
                 </Box>
                 <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <TrendingUp sx={{ fontSize: 16, color: "#4CAF50", mr: 0.5 }} />
+                  <TrendingUp sx={{ fontSize: 16, color: COLORS.SUCCESS, mr: 0.5 }} />
                   <Typography variant="body2" color="#4CAF50">
                     {card.change}
                   </Typography>

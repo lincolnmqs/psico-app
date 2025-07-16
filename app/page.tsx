@@ -31,6 +31,7 @@ import {
 } from "@mui/icons-material"
 import Link from "next/link"
 import { useTheme } from "@/contexts/ThemeContext"
+import { COLORS, GRADIENTS } from "@/constants/colors"
 
 export default function HomePage() {
   const { mode, toggleTheme } = useTheme()
@@ -39,7 +40,7 @@ export default function HomePage() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       {/* Header */}
-      <AppBar position="static" sx={{ backgroundColor: "#2E7D32" }}>
+      <AppBar position="static" sx={{ backgroundColor: COLORS.PRIMARY_DARK }}>
         <Toolbar>
           <Psychology sx={{ mr: 2 }} />
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -66,10 +67,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <Box
         sx={{
-          background:
-            mode === "dark"
-              ? "linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%)"
-              : "linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%)",
+          background: mode === "dark" ? GRADIENTS.PRIMARY_DARK : GRADIENTS.PRIMARY_LIGHT,
           color: "white",
           py: 8,
           textAlign: "center",
@@ -115,7 +113,7 @@ export default function HomePage() {
           <Grid item xs={12} md={6} lg={4}>
             <Card sx={{ height: "100%", textAlign: "center", p: 2 }}>
               <CardContent>
-                <Assignment sx={{ fontSize: 48, color: "#4CAF50", mb: 2 }} />
+                <Assignment sx={{ fontSize: 48, color: COLORS.PRIMARY, mb: 2 }} />
                 <Typography variant="h5" component="h3" gutterBottom>
                   Prontuário Digital
                 </Typography>
@@ -129,7 +127,7 @@ export default function HomePage() {
           <Grid item xs={12} md={6} lg={4}>
             <Card sx={{ height: "100%", textAlign: "center", p: 2 }}>
               <CardContent>
-                <Payment sx={{ fontSize: 48, color: "#4CAF50", mb: 2 }} />
+                <Payment sx={{ fontSize: 48, color: COLORS.PRIMARY, mb: 2 }} />
                 <Typography variant="h5" component="h3" gutterBottom>
                   Controle Financeiro
                 </Typography>
@@ -143,7 +141,7 @@ export default function HomePage() {
           <Grid item xs={12} md={6} lg={4}>
             <Card sx={{ height: "100%", textAlign: "center", p: 2 }}>
               <CardContent>
-                <Schedule sx={{ fontSize: 48, color: "#4CAF50", mb: 2 }} />
+                <Schedule sx={{ fontSize: 48, color: COLORS.PRIMARY, mb: 2 }} />
                 <Typography variant="h5" component="h3" gutterBottom>
                   Agendamento Online
                 </Typography>
@@ -157,7 +155,7 @@ export default function HomePage() {
           <Grid item xs={12} md={6} lg={4}>
             <Card sx={{ height: "100%", textAlign: "center", p: 2 }}>
               <CardContent>
-                <CheckCircle sx={{ fontSize: 48, color: "#4CAF50", mb: 2 }} />
+                <CheckCircle sx={{ fontSize: 48, color: COLORS.PRIMARY, mb: 2 }} />
                 <Typography variant="h5" component="h3" gutterBottom>
                   Contratos Digitais
                 </Typography>
@@ -171,7 +169,7 @@ export default function HomePage() {
           <Grid item xs={12} md={6} lg={4}>
             <Card sx={{ height: "100%", textAlign: "center", p: 2 }}>
               <CardContent>
-                <Psychology sx={{ fontSize: 48, color: "#4CAF50", mb: 2 }} />
+                <Psychology sx={{ fontSize: 48, color: COLORS.PRIMARY, mb: 2 }} />
                 <Typography variant="h5" component="h3" gutterBottom>
                   Devolutivas
                 </Typography>
@@ -185,7 +183,7 @@ export default function HomePage() {
           <Grid item xs={12} md={6} lg={4}>
             <Card sx={{ height: "100%", textAlign: "center", p: 2 }}>
               <CardContent>
-                <Assignment sx={{ fontSize: 48, color: "#4CAF50", mb: 2 }} />
+                <Assignment sx={{ fontSize: 48, color: COLORS.PRIMARY, mb: 2 }} />
                 <Typography variant="h5" component="h3" gutterBottom>
                   Relatórios
                 </Typography>
@@ -241,7 +239,7 @@ export default function HomePage() {
       </Box>
 
       {/* Footer */}
-      <Box sx={{ backgroundColor: "#2E7D32", color: "white", py: 4 }}>
+      <Box sx={{ backgroundColor: COLORS.PRIMARY_DARK, color: "white", py: 4 }}>
         <Container maxWidth="lg">
           <Grid container spacing={4}>
             <Grid item xs={12} md={6}>

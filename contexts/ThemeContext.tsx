@@ -4,6 +4,7 @@ import type React from "react"
 import { createContext, useContext, useState, useEffect } from "react"
 import { ThemeProvider, createTheme } from "@mui/material/styles"
 import CssBaseline from "@mui/material/CssBaseline"
+import { COLORS } from "@/constants/colors"
 
 type ThemeMode = "light" | "dark"
 
@@ -47,14 +48,14 @@ export const ThemeContextProvider: React.FC<{ children: React.ReactNode }> = ({ 
     palette: {
       mode,
       primary: {
-        main: "#4CAF50",
+        main: COLORS.PRIMARY,
       },
       secondary: {
-        main: "#2E7D32",
+        main: COLORS.PRIMARY_DARK,
       },
       background: {
-        default: mode === "light" ? "#f5f5f5" : "#121212",
-        paper: mode === "light" ? "#ffffff" : "#1e1e1e",
+        default: mode === "light" ? COLORS.LIGHT_GRAY : COLORS.DARK_BACKGROUND,
+        paper: mode === "light" ? COLORS.WHITE : COLORS.DARK_PAPER,
       },
     },
     typography: {
