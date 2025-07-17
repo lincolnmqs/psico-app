@@ -87,7 +87,7 @@ export default function HomePage() {
             href="/login"
             sx={{
               backgroundColor: "white",
-              color: "#2E7D32",
+              color: "#3A5BA0",
               px: 4,
               py: 1.5,
               "&:hover": {
@@ -207,7 +207,7 @@ export default function HomePage() {
           <Grid container spacing={4}>
             <Grid item xs={12} md={4}>
               <Paper sx={{ p: 3, textAlign: "center", height: "100%" }}>
-                <Phone sx={{ fontSize: 48, color: "#4CAF50", mb: 2 }} />
+                <Phone sx={{ fontSize: 48, color: COLORS.PRIMARY, mb: 2 }} />
                 <Typography variant="h6" gutterBottom>
                   Telefone
                 </Typography>
@@ -217,7 +217,7 @@ export default function HomePage() {
 
             <Grid item xs={12} md={4}>
               <Paper sx={{ p: 3, textAlign: "center", height: "100%" }}>
-                <Email sx={{ fontSize: 48, color: "#4CAF50", mb: 2 }} />
+                <Email sx={{ fontSize: 48, color: COLORS.PRIMARY, mb: 2 }} />
                 <Typography variant="h6" gutterBottom>
                   Email
                 </Typography>
@@ -227,7 +227,7 @@ export default function HomePage() {
 
             <Grid item xs={12} md={4}>
               <Paper sx={{ p: 3, textAlign: "center", height: "100%" }}>
-                <LocationOn sx={{ fontSize: 48, color: "#4CAF50", mb: 2 }} />
+                <LocationOn sx={{ fontSize: 48, color: COLORS.PRIMARY, mb: 2 }} />
                 <Typography variant="h6" gutterBottom>
                   Endereço
                 </Typography>

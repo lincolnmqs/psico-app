@@ -1,35 +1,35 @@
 // Cores principais do sistema
 export const COLORS = {
-  // Verde - Cor principal
-  PRIMARY: "#4CAF50",
-  PRIMARY_DARK: "#2E7D32",
-  PRIMARY_DARKER: "#1B5E20",
-  PRIMARY_LIGHT: "#81C784",
-  PRIMARY_LIGHTER: "#C8E6C9",
+  // Azul suave - Cor principal
+  PRIMARY: "#5C8DFF",           // Azul psicologia
+  PRIMARY_DARK: "#3A5BA0",      // Azul mais escuro
+  PRIMARY_DARKER: "#22335C",    // Azul ainda mais escuro
+  PRIMARY_LIGHT: "#A7C7FF",     // Azul claro
+  PRIMARY_LIGHTER: "#E3ECFF",   // Azul bem suave
 
-  // Backgrounds com verde
-  PRIMARY_BACKGROUND: "#E8F5E8",
-  PRIMARY_BACKGROUND_ALPHA: "rgba(76, 175, 80, 0.2)",
+  // Backgrounds com azul
+  PRIMARY_BACKGROUND: "#F5F8FF",
+  PRIMARY_BACKGROUND_ALPHA: "rgba(92, 141, 255, 0.15)",
 
-  // Cores de status
-  SUCCESS: "#4CAF50",
-  SUCCESS_BACKGROUND: "#E8F5E8",
-  WARNING: "#FF9800",
-  WARNING_BACKGROUND: "#FFF3E0",
-  ERROR: "#F44336",
-  ERROR_BACKGROUND: "#FFEBEE",
-  INFO: "#2196F3",
-  INFO_BACKGROUND: "#E3F2FD",
+  // Cores de status (tons suaves)
+  SUCCESS: "#6FCF97",                // Verde suave
+  SUCCESS_BACKGROUND: "#E6F9F0",
+  WARNING: "#FFB366",                // Laranja suave
+  WARNING_BACKGROUND: "#FFF6E5",
+  ERROR: "#FF6B6B",                  // Vermelho suave
+  ERROR_BACKGROUND: "#FFECEC",
+  INFO: "#56CCF2",                   // Azul claro
+  INFO_BACKGROUND: "#E6F7FB",
 
   // Cores neutras
   WHITE: "#ffffff",
-  LIGHT_GRAY: "#f5f5f5",
-  MEDIUM_GRAY: "#e0e0e0",
-  DARK_GRAY: "#424242",
+  LIGHT_GRAY: "#F7F7FA",
+  MEDIUM_GRAY: "#E0E3EA",
+  DARK_GRAY: "#4A4A4A",
 
   // Cores para modo escuro
-  DARK_BACKGROUND: "#121212",
-  DARK_PAPER: "#1e1e1e",
+  DARK_BACKGROUND: "#181C25",
+  DARK_PAPER: "#23283A",
 
   // Transparências
   WHITE_ALPHA_10: "rgba(255,255,255,0.1)",
@@ -39,8 +39,8 @@ export const COLORS = {
 
 // Gradientes
 export const GRADIENTS = {
-  PRIMARY_LIGHT: "linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%)",
-  PRIMARY_DARK: "linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%)",
+  PRIMARY_LIGHT: "linear-gradient(135deg, #5C8DFF 0%, #A7C7FF 100%)",
+  PRIMARY_DARK: "linear-gradient(135deg, #3A5BA0 0%, #22335C 100%)",
 } as const
 
 // Cores por contexto de uso
